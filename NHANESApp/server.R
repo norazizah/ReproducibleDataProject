@@ -7,10 +7,6 @@ SP$npers <- 0
 NHANES_data_file <- "NHANES_1999.RData"
 load(file = NHANES_data_file)
 
-# create variable selection list
-# choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3)
-varChoices <- as.list(NHANES_names_use)
-
 shinyServer(
   function(input, output) {
     # shinyServer is Started up every time the domain is called.

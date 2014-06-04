@@ -1,5 +1,12 @@
 library(shiny)
 
+NHANES_data_file <- "NHANES_1999.RData"
+load(file = NHANES_data_file)
+
+# create variable selection list
+# choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3)
+varChoices <- as.list(NHANES_names_use)
+
 shinyUI(pageWithSidebar(
   headerPanel("NHANES 1999-2000 Variable Quantiles"),
   sidebarPanel(

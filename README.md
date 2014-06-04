@@ -1,9 +1,16 @@
-## Coursera Developing Data Projects Course Project
+## Coursera Developing Data Products Course Project
 
 This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify to prepare a reproducible pitch presentation about your application.
 
-Assignment at   https://class.coursera.org/devdataprod-002/human_grading/view/courses/972092/assessments/5/submissions
+[Assignment](https://class.coursera.org/devdataprod-002/human_grading/view/courses/972092/assessments/5/submissions)
 
-# Shiny Application
+### Shiny Application
 
-# Reproducible Pitch Presentation
+App published from RStudio to ShinyApps.io  
+See http://shiny.rstudio.com/tutorial/lesson7/ for details.
+
+https://rseiter.shinyapps.io/NHANESApp/
+
+### Reproducible Pitch Presentation
+
+Presentation published as a link to the slidify presentation.
