@@ -5,13 +5,13 @@ load(file = NHANES_data_file)
 
 # create variable selection list
 # choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3)
-varChoices <- as.list(NHANES_names_use)
+varChoices <- as.list(NHANES_pulldown_choices)
 
 shinyUI(pageWithSidebar(
-  headerPanel("NHANES 1999-2000 Variable Quantiles"),
+  headerPanel("NHANES 1999-2000 Lab Variable Quantiles"),
   sidebarPanel(
     selectInput("selectVar", label = h3("NHANES variable"), 
-                choices = varChoices, selected = "LBXSGL"),
+                choices = varChoices, selected = "Glucose (mg/dL) - LBXSGL"),
     submitButton('Submit')
   ),
   mainPanel(
