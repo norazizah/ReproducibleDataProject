@@ -24,3 +24,10 @@ runApp(display.mode='showcase')
 # Just delete passwords.txt ?  Seems to work.
 # addAuthorizedUser("test")
 # removeAuthorizedUser("test")
+
+
+
+# slidify
+slidify("index.Rmd")
+library(knitr)
+browseURL("index.html")

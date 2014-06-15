@@ -1,4 +1,5 @@
 library(shiny)
+library(car) # Needed here?
 
 NHANES_data_file <- "NHANES_1999.RData"
 load(file = NHANES_data_file)
@@ -8,17 +9,26 @@ load(file = NHANES_data_file)
 varChoices <- as.list(NHANES_pulldown_choices)
 
 shinyUI(pageWithSidebar(
-  headerPanel("NHANES 1999-2000 Lab Variable Quantiles"),
+  headerPanel("NHANES 1999-2000 Blood Lab Variables"),
   sidebarPanel(
     selectInput("selectVar", label = h3("NHANES variable"), 
                 choices = varChoices, selected = "Glucose (mg/dL) - LBXSGL"),
+    selectInput("selectYVar", label = h3("NHANES Y axis"), 
+                choices = varChoices, selected = "Triglyceride (mg/dL) - TR"),
     submitButton('Submit')
   ),
   mainPanel(
-    plotOutput('varHist'),
+    tabsetPanel(
+      tabPanel("Quantiles", plotOutput('varHist')),
+      tabPanel("Scatterplot", plotOutput('varScatter'))
+      #tabPanel("Scatterplot", plotOutput('varScatterplot')) 
+    ),
+    #plotOutput('varHist'),
+    #plotOutput('varScatterplot'),
     verbatimTextOutput('varInfo'),
-    # Would prefer this go elsewhere
-    helpText("NHANES data obtained from"),
+    verbatimTextOutput('varInfoY'),
+    # Would prefer this help text go elsewhere
+    helpText("NHANES (US National Health and Nutrition Examination Survey) data obtained from"),
     helpText(a("http://www.cdc.gov/nchs/nhanes.htm",
              href="http://www.cdc.gov/nchs/nhanes.htm")),
     # Display the total number of hits on the app.
