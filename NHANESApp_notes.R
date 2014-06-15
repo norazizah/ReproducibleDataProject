@@ -1,6 +1,13 @@
 # NHANESApp notes and utility code
-
+# Don't run this, just cut and paste
 # Seems important to test with local environment cleared.
+# App is at https://rseiter.shinyapps.io/NHANESApp/
+
+# Helpful
+accountInfo(accounts())
+deployApp(appDir = "C:/Users/rseiter/Documents/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/NHANESApp")
+#deployApp(appDir = "C:/Users/rseiter/Documents/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/NHANESApp1")
+
 
 # Tried deploying to https://rseiter.shinyapps.io/NHANESApp/
 # but fails with error:
@@ -21,7 +28,14 @@ library(shiny)
 runApp(display.mode='showcase')
 
 # To deploy the app to https://www.shinyapps.io/applications
+library(shinyapps)
 # deployApp()
+# Note problem with:
+# Error: Unable to deploy package dependency 'rmarkdown' The package was
+# installed from an unsupported repository 'RStudioIDE'. Only packages installed
+# from CRAN or GitHub are supported.
+# That was when wd was top level.  Be sure to be in NHANESApp dir.  Now getting:
+# Error: /v1/applications/11542/upload 500 - Internal Server Error
 
 # Set up authorized users (prompts for password)
 # Do not set password on project!  Unable to reset authorization or delete app!

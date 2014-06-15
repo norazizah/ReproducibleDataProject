@@ -15,7 +15,9 @@ shinyUI(pageWithSidebar(
                 choices = varChoices, selected = "Glucose (mg/dL) - LBXSGL"),
     selectInput("selectYVar", label = h3("NHANES Y axis"), 
                 choices = varChoices, selected = "Triglyceride (mg/dL) - TR"),
-    submitButton('Submit')
+    submitButton('Submit'),
+    h5(helpText("Documentation")),
+    helpText("Select two NHANES blood lab test variables above (test name, units, and NHANES variable name are all displayed) then click Submit.  A histogram with various quantiles is displayed for the first variable in the Quantiles tab (this information can be used to establish test reference ranges).  Click on the Scatterplot tab to see a scatterplot of the two variables along with a regression line, a loess smooth, and Box plots of both variables along the axes.  The scatterplot helps detect if there is a relationship between the two variables.  A numerical summary of both variables is provided below the plots.")
   ),
   mainPanel(
     tabsetPanel(
