@@ -35,7 +35,9 @@ mode        : selfcontained # {standalone, draft}
 
 - Use case 1: Examine laboratory test results for their 5% and 95% quantiles (25%, 50%, and 75% are also shown) in a histogram.  These quantiles are typically used for test reference ranges and the histogram gives a perspective on the entire distribution.  Notice how the 95% level for serum glucose is close to the cutoff for diabetes.
 
-- Use case 2: Examine scatter plots of one test result versus another.  This enables exploration of associations between test results (for example, see if serum calcium and phosphorus levels are related).
+- Use case 2: Examine scatter plots of one test result versus another.  This enables exploration of associations between test results (for example, see if serum calcium and phosphorus levels are related, note the green regression line).
+
+- NHANESApp allows users to interactively select variables to examine.
 
 
 ---
@@ -58,7 +60,7 @@ for (i in 1:length(quant)) abline(v=quant[i],col="red")
 
 ---
 
-## Lab Test Scatterplot for Serum Calcium and Phosphorus
+## Scatterplot of Serum Calcium and Phosphorus
 
 ```{r, echo=F, warning=F}
 library(car)
@@ -70,7 +72,7 @@ scatterplot(NHANES_data[,NHANESVar], NHANES_data[,NHANESYVar], xlab=selectVar,
             ylab=selectYVar)
 ```
 
-
+<!--
 ---
 
 ## Conclusions
@@ -81,4 +83,4 @@ scatterplot(NHANES_data[,NHANESVar], NHANES_data[,NHANESYVar], xlab=selectVar,
   - Allow specifying axes limits to focus on relevant portions of the distributions.
   - Allow specifying subsets (e.g. by age or gender).  Clinical reference ranges are often age range or gender specific.
   - Allow variable transformations (e.g. log).  This can help viewing distributions which are non-normal or have an extremely wide range.
-
+-->

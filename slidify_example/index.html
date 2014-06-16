@@ -66,7 +66,8 @@
 <li><p><a href="https://rseiter.shinyapps.io/NHANESApp/">NHANESApp</a> is a web application developed using R and deployed using <a href="http://www.rstudio.com/products/shiny/">Shiny</a>.</p></li>
 <li><p>NHANESApp provides an easy to use and effective graphical interface to the 1999-2000 NHANES &quot;standard&quot; laboratory blood test data.  Two use cases are illustrated.</p></li>
 <li><p>Use case 1: Examine laboratory test results for their 5% and 95% quantiles (25%, 50%, and 75% are also shown) in a histogram.  These quantiles are typically used for test reference ranges and the histogram gives a perspective on the entire distribution.  Notice how the 95% level for serum glucose is close to the cutoff for diabetes.</p></li>
-<li><p>Use case 2: Examine scatter plots of one test result versus another.  This enables exploration of associations between test results (for example, see if serum calcium and phosphorus levels are related).</p></li>
+<li><p>Use case 2: Examine scatter plots of one test result versus another.  This enables exploration of associations between test results (for example, see if serum calcium and phosphorus levels are related, note the green regression line).</p></li>
+<li><p>NHANESApp allows users to interactively select variables to examine.</p></li>
 </ul>
 
   </article>
@@ -86,30 +87,23 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Laboratory Test Scatterplot for Serum Calcium and Phosphorus</h2>
+    <h2>Scatterplot of Serum Calcium and Phosphorus</h2>
   </hgroup>
   <article data-timings="">
     <p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<!--
+---
 
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Conclusions</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li><p>NHANESApp provides an easy to use and effective interface to the NHANES data for examing test result distributions and associations.</p></li>
-<li><p>There are a variety of enhancements that would be helpful:</p>
+## Conclusions
 
-<ul>
-<li>Allow specifying axes limits to focus on relevant portions of the distributions.</li>
-<li>Allow specifying subsets (e.g. by age or gender).  Clinical reference ranges are often age range or gender specific.</li>
-<li>Allow variable transformations (e.g. log).  This can help viewing distributions which are non-normal or have an extremely wide range.</li>
-</ul></li>
-</ul>
+- NHANESApp provides an easy to use and effective interface to the NHANES data for examing test result distributions and associations.
+
+- There are a variety of enhancements that would be helpful:
+  - Allow specifying axes limits to focus on relevant portions of the distributions.
+  - Allow specifying subsets (e.g. by age or gender).  Clinical reference ranges are often age range or gender specific.
+  - Allow variable transformations (e.g. log).  This can help viewing distributions which are non-normal or have an extremely wide range.
+-->
 
   </article>
   <!-- Presenter Notes -->
@@ -139,14 +133,8 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Laboratory Test Scatterplot for Serum Calcium and Phosphorus'>
+        data-slide=4 title='Scatterplot of Serum Calcium and Phosphorus'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Conclusions'>
-         5
       </a>
     </li>
   </ul>
