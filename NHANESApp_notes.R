@@ -60,13 +60,19 @@ browseURL("index.html")
 # getwd()
 
 # To publish (see assignment)
+# http://slidify.org/publish.html
 setwd("~/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/slidify_example")
 library(slidify)
 slidify("index.Rmd")#, save_payload=TRUE)
 publish(user = "rseiter", repo = "DevDataProdProject")
 # http://rseiter.github.io/DevDataProdProject
 # See https://class.coursera.org/devdataprod-002/forum/thread?thread_id=59
-# Try just publishing to Dropbox?
+# Try just publishing to Dropbox?  manually did not give usable page
+# Rpubs Failed in RStudio with RCurl error
+# http://rseiter.github.io/DevDataProdProject/index.html
+# http://rseiter.github.io/NHANESAppDeck/index.html
+# Finally got this one to work.  Why different?
+# http://rseiter.github.io/testDeck/index.html
 
 # Creating RData file to use here
 setwd("C:/Users/rseiter/Documents/Health/Health Equations/NHANES_import_into_HEq_example")
