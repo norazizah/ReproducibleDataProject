@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NHANESApp</title>
+  <meta charset="utf-8">
+  <meta name="description" content="NHANESApp">
+  <meta name="author" content="Richard Seiter">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>NHANESApp</h1>
+    <h2>A Shiny Web Application Which Provides Easy Access to National Health                  and Nutrition Examination Survey (NHANES) Data</h2>
+    <p>Richard Seiter<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What Is NHANES?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The <a href="http://www.cdc.gov/nchs/nhanes/about_nhanes.htm">National Health and Nutrition Examination Survey</a> is a survey conducted in the United States every other year.  It estimates health and nutrition information for the US population as a whole based on a weighted sample of about 10,000 people.</p></li>
+<li><p>A comprehensive set of data is made publicly available.  However, the data can be difficult to download and process.</p></li>
+<li><p>One common use of the NHANES data is establishing reference ranges for laboratory blood tests.</p></li>
+<li><p>NHANES data is also used in a wide variety of scientific studies.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>What Is the Purpose of NHANESApp?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p><a href="https://rseiter.shinyapps.io/NHANESApp/">NHANESApp</a> is a web application developed using R and deployed using <a href="http://www.rstudio.com/products/shiny/">Shiny</a>.</p></li>
+<li><p>NHANESApp provides an easy to use and effective graphical interface to the 1999-2000 NHANES &quot;standard&quot; laboratory blood test data.  Two use cases are illustrated.</p></li>
+<li><p>Use case 1: Examine laboratory test results for their 5% and 95% quantiles (25%, 50%, and 75% are also shown) in a histogram.  These quantiles are typically used for test reference ranges and the histogram gives a perspective on the entire distribution.  Notice how the 95% level for serum glucose is close to the cutoff for diabetes.</p></li>
+<li><p>Use case 2: Examine scatter plots of one test result versus another.  This enables exploration of associations between test results (for example, see if serum calcium and phosphorus levels are related).</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Laboratory Test Quantiles for Glucose</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Laboratory Test Scatterplot for Serum Calcium and Phosphorus</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Conclusions</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>NHANESApp provides an easy to use and effective interface to the NHANES data for examing test result distributions and associations.</p></li>
+<li><p>There are a variety of enhancements that would be helpful:</p>
+
+<ul>
+<li>Allow specifying axes limits to focus on relevant portions of the distributions.</li>
+<li>Allow specifying subsets (e.g. by age or gender).  Clinical reference ranges are often age range or gender specific.</li>
+<li>Allow variable transformations (e.g. log).  This can help viewing distributions which are non-normal or have an extremely wide range.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What Is NHANES?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What Is the Purpose of NHANESApp?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Laboratory Test Quantiles for Glucose'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Laboratory Test Scatterplot for Serum Calcium and Phosphorus'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Conclusions'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
