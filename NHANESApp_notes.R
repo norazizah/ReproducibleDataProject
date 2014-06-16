@@ -4,6 +4,7 @@
 # App is at https://rseiter.shinyapps.io/NHANESApp/
 
 # Helpful
+library(shinyapps)
 accountInfo(accounts())
 deployApp(appDir = "C:/Users/rseiter/Documents/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/NHANESApp")
 #deployApp(appDir = "C:/Users/rseiter/Documents/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/NHANESApp1")
@@ -47,12 +48,25 @@ library(shinyapps)
 
 # slidify
 # wd for this project
-"C:/Users/rseiter/Documents/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/slidify_example"
+setwd("C:/Users/rseiter/Documents/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/slidify_example")
 
+library(slidify)
 slidify("index.Rmd")
 library(knitr)
 browseURL("index.html")
+# publish_dropbox('Classes/DevDataProd/slidify_example') # Fiasco for me
+# setwd('~/Dropbox/Public/Classes/DevDataProd')
+# setwd('~')
+# getwd()
 
+# To publish (see assignment)
+setwd("~/Education/Coursera - Developing Data Products/Course Project/DevDataProdProject/slidify_example")
+library(slidify)
+slidify("index.Rmd")#, save_payload=TRUE)
+publish(user = "rseiter", repo = "DevDataProdProject")
+# http://rseiter.github.io/DevDataProdProject
+# See https://class.coursera.org/devdataprod-002/forum/thread?thread_id=59
+# Try just publishing to Dropbox?
 
 # Creating RData file to use here
 setwd("C:/Users/rseiter/Documents/Health/Health Equations/NHANES_import_into_HEq_example")
