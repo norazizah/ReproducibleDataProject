@@ -73,6 +73,8 @@ publish(user = "rseiter", repo = "DevDataProdProject")
 # http://rseiter.github.io/NHANESAppDeck/index.html
 # Finally got this one to work.  Why different?
 # http://rseiter.github.io/testDeck/index.html
+# This seems to be close to working:
+# http://rseiter.github.io/DevDataProdProject/slidify_example/index.html
 
 # Creating RData file to use here
 setwd("C:/Users/rseiter/Documents/Health/Health Equations/NHANES_import_into_HEq_example")
