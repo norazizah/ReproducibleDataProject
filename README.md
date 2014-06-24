@@ -12,10 +12,13 @@ See http://shiny.rstudio.com/tutorial/lesson7/ for details.
 https://rseiter.shinyapps.io/NHANESApp/
 
 Feature ideas:  
-- Add range analysis of variables.
-- Add variable transformations.
-- Add subset capability.
+- Add range analysis of variables.  
+- Add variable transformations.  
+- Add subset capability.  
 
 ### Reproducible Pitch Presentation
 
-Presentation published as a link to the slidify presentation.
+Presentation published as a link to the slidify presentation (any of these should work).  
+http://rseiter.github.io/DevDataProdProject/slidify_example/index.html  
+http://rseiter.github.io/NHANESAppDeck/index.html  
+http://rseiter.github.io/testDeck/index.html  
