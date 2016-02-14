@@ -2,6 +2,7 @@
 # Don't run this, just cut and paste
 # Seems important to test with local environment cleared.
 # App is at https://rseiter.shinyapps.io/NHANESApp/
+# make sure install the shiny apps
 
 # Helpful
 library(shinyapps)
